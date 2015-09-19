@@ -1,0 +1,22 @@
+{
+  "name": "mauerside",
+  "version": "1.0.0",
+  "description": "An wip algo to determine if a set of coordinates is west or east of the Berliner Mauer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexandre-Herve/mauerside.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexandre-Herve/mauerside/issues"
+  },
+  "homepage": "https://github.com/Alexandre-Herve/mauerside#readme",
+  "dependencies": {
+    "toxiclibsjs": "^0.2.7"
+  }
+}

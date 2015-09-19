@@ -1,5 +1,5 @@
 import { unit, pipe, bind } from './monad';
-import boundings from './boundings';
+import boundings from './get-boundings';
 
 export default function mauerside(coords) {
   const formatted = unit(coords, boundings);

@@ -9,4 +9,3 @@ const coords = { lat, lng };
 const answer = mauerside(coords);
 
 console.log(answer);
-
