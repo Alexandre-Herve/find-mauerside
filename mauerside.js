@@ -1,5 +1,6 @@
 import { unit, pipe, bind } from './monad';
 import boundings from './get-boundings';
+import matchingSegment from './matching-segment';
 
 export default function mauerside(coords) {
   const formatted = unit(coords, boundings);
@@ -7,9 +8,6 @@ export default function mauerside(coords) {
   return pipe(formatted, functions)[2];
 }
 
-/********************/
-/*      STEPS        /
-/********************/
 function isNorth(coords, boundings) {
   return coords.lat > boundings.maxLat ? 'north' : undefined;
 }
@@ -27,7 +25,7 @@ function isWest(coords, boundings) {
 }
 
 function fineTunning(coords, boundings) {
-  return undefined;
+  return matchingSegment(coords);
 }
 
 function dunno(coords, boundings) {
