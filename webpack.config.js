@@ -3,7 +3,9 @@ module.exports = {
   entry: "./index",
   output: {
     path: __dirname + "/dist",
-    filename: "bundle.js"
+    filename: "bundle.js",
+    library: "findMauerside",
+    libraryTarget: "commonjs2"
   },
   module: {
     loaders: [
