@@ -1,5 +1,5 @@
 import writeData from './write-data';
-import mauer from './sources/coord.json';
+import mauer from 'json!./sources/coord.json';
 
 const A = mauer[39];
 const B = mauer[40];

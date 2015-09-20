@@ -1,4 +1,4 @@
-import mauer from './data/fixed-mauer.json';
+import mauer from 'json!./data/fixed-mauer.json';
 import toxi from 'toxiclibsjs';
 
 const Vec2D = toxi.geom.Vec2D;
