@@ -49,7 +49,6 @@
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	exports['default'] = mauerside;
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -63,11 +62,11 @@
 
 	var _matchingSegment2 = _interopRequireDefault(_matchingSegment);
 
-	function mauerside(coords) {
+	exports['default'] = function (coords) {
 	  var formatted = (0, _monad.unit)(coords, _getBoundings2['default']);
 	  var functions = [isNorth, isSouth, isWest, isEast, fineTunning, dunno];
 	  return (0, _monad.pipe)(formatted, functions)[2];
-	}
+	};
 
 	function isNorth(coords, boundings) {
 	  return coords.lat > boundings.maxLat ? 'north' : undefined;
@@ -140,12 +139,12 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _jsonComputedDataFixedWallJson = __webpack_require__(3);
+	var _computedDataFixedWallJson = __webpack_require__(3);
 
-	var _jsonComputedDataFixedWallJson2 = _interopRequireDefault(_jsonComputedDataFixedWallJson);
+	var _computedDataFixedWallJson2 = _interopRequireDefault(_computedDataFixedWallJson);
 
 	// latitiudes
-	var latitudes = _jsonComputedDataFixedWallJson2['default'].map(function (p) {
+	var latitudes = _computedDataFixedWallJson2['default'].map(function (p) {
 	  return p.lat;
 	});
 	var maxLat = latitudes.reduce(function (max, l) {
@@ -156,7 +155,7 @@
 	}, 100);
 
 	// longitudes
-	var longitudes = _jsonComputedDataFixedWallJson2['default'].map(function (p) {
+	var longitudes = _computedDataFixedWallJson2['default'].map(function (p) {
 	  return p.long;
 	});
 	var maxLng = longitudes.reduce(function (max, l) {
@@ -1514,18 +1513,18 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _jsonComputedDataEastWallJson = __webpack_require__(5);
+	var _computedDataEastWallJson = __webpack_require__(5);
 
-	var _jsonComputedDataEastWallJson2 = _interopRequireDefault(_jsonComputedDataEastWallJson);
+	var _computedDataEastWallJson2 = _interopRequireDefault(_computedDataEastWallJson);
 
-	var _jsonComputedDataWestWallJson = __webpack_require__(6);
+	var _computedDataWestWallJson = __webpack_require__(6);
 
-	var _jsonComputedDataWestWallJson2 = _interopRequireDefault(_jsonComputedDataWestWallJson);
+	var _computedDataWestWallJson2 = _interopRequireDefault(_computedDataWestWallJson);
 
 	function getSide(coords) {
 
-	  var distanceEast = getMinimalDistance(_jsonComputedDataEastWallJson2['default'], coords);
-	  var distanceWest = getMinimalDistance(_jsonComputedDataWestWallJson2['default'], coords);
+	  var distanceEast = getMinimalDistance(_computedDataEastWallJson2['default'], coords);
+	  var distanceWest = getMinimalDistance(_computedDataWestWallJson2['default'], coords);
 
 	  if (distanceWest < distanceEast) {
 	    return 'west';

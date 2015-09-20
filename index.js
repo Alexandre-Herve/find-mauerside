@@ -2,7 +2,7 @@ import { unit, pipe, bind } from './monad';
 import boundings from './get-boundings';
 import matchingSegment from './matching-segment';
 
-export default function mauerside(coords) {
+export default function(coords) {
   const formatted = unit(coords, boundings);
   const functions = [isNorth, isSouth, isWest, isEast, fineTunning, dunno];
   return pipe(formatted, functions)[2];
