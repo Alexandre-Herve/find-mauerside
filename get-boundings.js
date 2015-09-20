@@ -1,4 +1,4 @@
-import mauer from './data/coord.json';
+import mauer from './computed-data/fixed-wall.json';
 
 // latitiudes
 const latitudes = mauer.map((p) => p.lat);

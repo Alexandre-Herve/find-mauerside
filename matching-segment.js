@@ -1,5 +1,5 @@
-import eastWall from './data/east-wall.json'; 
-import westWall from './data/west-wall.json'; 
+import eastWall from './computed-data/east-wall.json'; 
+import westWall from './computed-data/west-wall.json'; 
 
 export default function getSide(coords) {
 
